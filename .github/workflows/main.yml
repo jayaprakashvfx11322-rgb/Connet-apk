@@ -14,20 +14,28 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-      - run: npm run build
+      - name: Build Web App
+        run: npm run build
 
-      - run: |
-          npm install @capacitor/android
+      - name: Install Capacitor
+        run: |
+          npm install @capacitor/core @capacitor/cli @capacitor/android
+
+      - name: Create Android Project
+        run: |
           npx cap add android
+          npx cap sync android
 
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
-      - run: |
+      - name: Build APK
+        run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
