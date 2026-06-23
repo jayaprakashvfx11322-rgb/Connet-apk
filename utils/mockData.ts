@@ -7,3 +7,5 @@ export const INITIAL_MOCK_USERS = [];
 export const INITIAL_MOCK_POSTS = [];
 
 export const INITIAL_MOCK_REELS = [];
+
+export const INITIAL_MOCK_VIDEOS = [];
