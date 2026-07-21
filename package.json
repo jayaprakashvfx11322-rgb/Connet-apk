@@ -9,6 +9,9 @@
     "preview": "vite preview",
     "lint": "tsc --noEmit"
   },
+  "overrides": {
+    "es-toolkit": "1.39.3"
+  },
   "dependencies": {
     "@capacitor/android": "^7.4.2",
     "@capacitor/cli": "^7.4.2",
